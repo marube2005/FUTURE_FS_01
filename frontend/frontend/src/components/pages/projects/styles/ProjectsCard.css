@@ -1,0 +1,116 @@
+@import '../../../../styles/variables.css';
+
+.project-card {
+  background-color: var(--background);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+}
+
+.project-image {
+  height: 200px;
+  overflow: hidden;
+}
+
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-normal);
+}
+
+.project-card:hover .project-image img {
+  transform: scale(1.05);
+}
+
+.image-placeholder {
+  width: 100%;
+  height: 100%;
+  background-color: color-mix(in srgb, var(--background) 90%, var(--text));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text);
+  font-weight: 500;
+}
+
+.project-content {
+  padding: var(--space-6);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-title {
+  font-size: var(--text-xl);
+  margin-bottom: var(--space-3);
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-bottom: var(--space-4);
+}
+
+.project-tag {
+  background-color: color-mix(in srgb, var(--primary) 15%, transparent);
+  color: var(--primary);
+  font-size: var(--text-xs);
+  padding: var(--space-1) var(--space-2);
+  border-radius: var(--radius-full);
+  font-weight: 500;
+}
+
+.project-description {
+  color: color-mix(in srgb, var(--text) 80%, var(--background));
+  margin-bottom: var(--space-6);
+  flex: 1;
+}
+
+.project-links {
+  display: flex;
+  gap: var(--space-4);
+  margin-top: auto;
+}
+
+.project-link {
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-md);
+  font-weight: 500;
+  font-size: var(--text-sm);
+  text-align: center;
+  transition: all var(--transition-fast);
+}
+
+.live-link {
+  background-color: var(--primary);
+  color: white;
+  flex: 1;
+}
+
+.live-link:hover {
+  background-color: color-mix(in srgb, var(--primary) 80%, black);
+  color: white;
+}
+
+.code-link {
+  background-color: transparent;
+  border: 1px solid var(--secondary);
+  color: var(--secondary);
+  flex: 1;
+}
+
+.code-link:hover {
+  background-color: var(--secondary);
+  color: white;
+}

@@ -1,0 +1,86 @@
+@import '../../../styles/variables.css';
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  border-radius: var(--radius-md);
+  transition: all var(--transition-fast);
+  cursor: pointer;
+  border: none;
+  outline: none;
+  text-align: center;
+}
+
+.btn:focus {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Variants */
+.btn-primary {
+  background-color: var(--primary);
+  color: white;
+}
+
+.btn-primary:hover:not(:disabled) {
+  background-color: color-mix(in srgb, var(--primary) 80%, black);
+}
+
+.btn-secondary {
+  background-color: var(--secondary);
+  color: white;
+}
+
+.btn-secondary:hover:not(:disabled) {
+  background-color: color-mix(in srgb, var(--secondary) 80%, black);
+}
+
+.btn-outline {
+  background-color: transparent;
+  border: 2px solid var(--primary);
+  color: var(--primary);
+}
+
+.btn-outline:hover:not(:disabled) {
+  background-color: var(--primary);
+  color: white;
+}
+
+.btn-text {
+  background-color: transparent;
+  color: var(--primary);
+  padding: 0;
+}
+
+.btn-text:hover:not(:disabled) {
+  color: color-mix(in srgb, var(--primary) 80%, black);
+  text-decoration: underline;
+}
+
+/* Sizes */
+.btn-small {
+  padding: var(--space-1) var(--space-3);
+  font-size: var(--text-sm);
+}
+
+.btn-medium {
+  padding: var(--space-2) var(--space-6);
+  font-size: var(--text-base);
+}
+
+.btn-large {
+  padding: var(--space-3) var(--space-8);
+  font-size: var(--text-lg);
+}
+
+/* Full width */
+.btn-full {
+  width: 100%;
+}
