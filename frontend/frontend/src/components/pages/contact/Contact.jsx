@@ -1,4 +1,4 @@
-import React from "react";
+
 import { useState } from "react";
 import { FaUser, FaEnvelope, FaTag, FaComments } from "react-icons/fa";
 import './Contact.css';
